@@ -444,6 +444,7 @@ async function initConfig(configFile) {
             "mqtt_client_key": process.env.MQTTCLIENTKEY,
             "mqtt_client_cert": process.env.MQTTCLIENTCERT,
             "mqtt_ca": process.env.MQTTCA,
+	    "rejectUnauthorized": "false",
             "ring_token": process.env.RINGTOKEN,
             "disarm_code": process.env.DISARMCODE,
             "beam_duration": process.env.BEAMDURATION,
