@@ -390,7 +390,8 @@ function initMqtt() {
         password: mqtt_pass,
 		key: mqtt_client_key,
 		cert: mqtt_client_cert,
-		ca: mqtt_ca
+		ca: mqtt_ca,
+	        rejectUnauthorized: false
     });
     return mqtt
 }
@@ -444,7 +445,6 @@ async function initConfig(configFile) {
             "mqtt_client_key": process.env.MQTTCLIENTKEY,
             "mqtt_client_cert": process.env.MQTTCLIENTCERT,
             "mqtt_ca": process.env.MQTTCA,
-	    "rejectUnauthorized": "false",
             "ring_token": process.env.RINGTOKEN,
             "disarm_code": process.env.DISARMCODE,
             "beam_duration": process.env.BEAMDURATION,
